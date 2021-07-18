@@ -21,8 +21,12 @@ async def say_hi(ctx):
 
 @bot.command(name='info')
 async def get_info(ctx , op):
-    data = get_coinInfo(op)
-    await ctx.channel.send(op)
+    try:
+        data = get_coinInfo(op)
+        emb = make_embed_info(data)
+        await ctx.channel.send(embed=emb)
+    except Exception as e:
+        await ctx.channel.send(embed=error_embed())
 
 
 
