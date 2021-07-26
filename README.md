@@ -1,2 +1,2 @@
 # CryptoBot
-Tottally accurate and completly serius cryptoBot using the LunarCrash API 🚀
+Tottally accurate and completly serius cryptoBot for discord using the LunarCrash API 🚀
