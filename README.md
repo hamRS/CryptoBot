@@ -1,5 +1,5 @@
 # CryptoBot
-Tottally accurate and completly serius cryptoBot for discord using the LunarCrash API 🚀
+Totally accurate and completely serious crypto Bot for discord using the LunarCrush API 🚀
 
 Commands:
 
