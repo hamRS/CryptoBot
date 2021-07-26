@@ -22,7 +22,8 @@ buy_url = [
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsCcaxSrHSWLAnAJIDvq1rFopDn9glNwa4PtTOUkCEPdjXlP4U8bT2AU0BcrhBmf2_GM&usqp=CAU',
     'https://aws1.discourse-cdn.com/business4/uploads/cardano/optimized/2X/5/5a49c6a0775a7e10d84f985de7f4f08ab2cef211_2_690x388.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3FjEV7Et1DGTKNvzvfvAKl6AzGDHVE_n7PSJXhuj8uwFyYfkuUOZvRs3lDmaFnQIh5Bg&usqp=CAU',
-    'https://cimg.co/w/articles-attachments/1/60a/5031c993df.jpeg'
+    'https://cimg.co/w/articles-attachments/1/60a/5031c993df.jpeg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNk-kRJSrhxIfkZ8vnG577FMKMDSrc1LLr6g&usqp=CAU'
 ]
 
 sell_url = [
@@ -57,7 +58,7 @@ buy_phrase = [
 ]
 
 sell_phrases =[
-    "I don't know about this one",
+    "I don't know about this one chief",
     "Don't",
     "Cesar",
     "Forget about it"
@@ -91,15 +92,14 @@ def make_embed_info(data):
     return embed
 
 
-
 def get_phrase(social_impact , rank , galaxy_score):
-    if(galaxy_score >= 60 and rank <= 20 and social_impact >= 2.0):
+    if((galaxy_score >= 60 and rank <= 20 and social_impact >= 2.0 ) or (galaxy_score < 60 and rank > 20 and social_impact >= 2.0)):
         return random.choice(buy_phrase)
     return random.choice(sell_phrases)
 
 
 def get_image_type(social_impact , rank , galaxy_score):
-    if(galaxy_score >= 60 and rank <= 20 and social_impact >= 2.0):
+    if((galaxy_score >= 60 and rank <= 20 and social_impact >= 2.0 ) or (galaxy_score < 60 and rank > 20 and social_impact >= 2.0)):
         return get_random_buy()
     return get_random_sell()
 
